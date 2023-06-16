@@ -3,11 +3,8 @@ def next_num(lst, x):
 
 
 def Xbonacci(signature, n):
-    if len(signature) > n:
-        return signature[:n]
-    repeat_num = n - len(signature)
+    result = signature[:n]
     x = len(signature)
-    result = signature
-    for _ in range(repeat_num):
+    while len(result) < n:
         result.append(next_num(result, x))
     return result
